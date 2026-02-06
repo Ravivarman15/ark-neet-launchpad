@@ -2,95 +2,76 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* ARK Learning Arena Design System */
 
 @layer base {
   :root {
+    /* ARK Brand Colors */
+    --ark-blue: 213 79% 19%;
+    --ark-white: 0 0% 100%;
+    --ark-yellow: 45 100% 51%;
+    --ark-pink: 340 100% 65%;
+
+    /* Semantic tokens */
     --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    --foreground: 213 79% 19%;
 
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card-foreground: 213 79% 19%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover-foreground: 213 79% 19%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 213 79% 19%;
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 210 20% 96%;
+    --secondary-foreground: 213 79% 19%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 210 20% 96%;
+    --muted-foreground: 213 30% 40%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 45 100% 51%;
+    --accent-foreground: 213 79% 19%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 213 20% 85%;
+    --input: 213 20% 85%;
+    --ring: 45 100% 51%;
 
     --radius: 0.5rem;
 
-    --sidebar-background: 0 0% 98%;
+    /* Custom gradients */
+    --gradient-blue: linear-gradient(135deg, hsl(213 79% 19%) 0%, hsl(213 79% 28%) 100%);
+    --gradient-yellow: linear-gradient(135deg, hsl(45 100% 51%) 0%, hsl(40 100% 45%) 100%);
+    --gradient-hero: linear-gradient(180deg, hsl(213 79% 16%) 0%, hsl(213 79% 22%) 100%);
 
-    --sidebar-foreground: 240 5.3% 26.1%;
-
-    --sidebar-primary: 240 5.9% 10%;
-
-    --sidebar-primary-foreground: 0 0% 98%;
-
-    --sidebar-accent: 240 4.8% 95.9%;
-
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    /* Shadows */
+    --shadow-card: 0 4px 20px -4px hsl(213 79% 19% / 0.1);
+    --shadow-yellow: 0 4px 24px -4px hsl(45 100% 51% / 0.4);
+    --shadow-elevated: 0 8px 32px -8px hsl(213 79% 19% / 0.15);
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
-
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
-
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
-
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
-
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
-
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
-
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
-
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --background: 213 79% 10%;
+    --foreground: 0 0% 98%;
+    --card: 213 79% 14%;
+    --card-foreground: 0 0% 98%;
+    --popover: 213 79% 14%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 45 100% 51%;
+    --primary-foreground: 213 79% 19%;
+    --secondary: 213 50% 20%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 213 50% 20%;
+    --muted-foreground: 210 20% 70%;
+    --accent: 45 100% 51%;
+    --accent-foreground: 213 79% 19%;
+    --border: 213 50% 25%;
+    --input: 213 50% 25%;
+    --ring: 45 100% 51%;
   }
 }
 
@@ -100,6 +81,115 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground antialiased;
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer components {
+  /* ARK Button Variants */
+  .btn-primary {
+    @apply bg-ark-yellow text-ark-blue font-semibold px-6 py-3 rounded-lg 
+           transition-all duration-300 hover:shadow-yellow hover:scale-[1.02]
+           active:scale-[0.98] cursor-pointer;
+  }
+
+  .btn-secondary {
+    @apply border-2 border-ark-white text-ark-white font-semibold px-6 py-3 rounded-lg
+           transition-all duration-300 hover:bg-ark-white hover:text-ark-blue
+           active:scale-[0.98] cursor-pointer;
+  }
+
+  .btn-outline-blue {
+    @apply border-2 border-ark-blue text-ark-blue font-semibold px-6 py-3 rounded-lg
+           transition-all duration-300 hover:bg-ark-blue hover:text-ark-white
+           active:scale-[0.98] cursor-pointer;
+  }
+
+  /* Card styles */
+  .card-elevated {
+    @apply bg-card rounded-xl p-6 shadow-card transition-all duration-300
+           hover:shadow-elevated hover:-translate-y-1;
+  }
+
+  .card-subject {
+    @apply bg-ark-white rounded-xl p-6 border border-border
+           transition-all duration-300 hover:border-ark-yellow hover:shadow-yellow;
+  }
+
+  /* Section containers */
+  .section-blue {
+    @apply bg-ark-blue text-ark-white;
+  }
+
+  .section-light {
+    @apply bg-secondary;
+  }
+
+  /* Badge styles */
+  .badge-yellow {
+    @apply inline-flex items-center gap-2 bg-ark-yellow text-ark-blue 
+           px-4 py-2 rounded-full font-semibold text-sm;
+  }
+
+  .badge-outline {
+    @apply inline-flex items-center gap-2 border-2 border-ark-blue text-ark-blue
+           px-4 py-2 rounded-full font-medium text-sm;
+  }
+
+  /* Free book highlight */
+  .free-book-highlight {
+    @apply relative inline-block;
+  }
+
+  .free-book-highlight::after {
+    content: '';
+    @apply absolute bottom-0 left-0 w-full h-1 bg-ark-pink rounded-full;
+  }
+
+  /* Pink accent underline */
+  .accent-underline {
+    @apply relative inline-block;
+  }
+
+  .accent-underline::after {
+    content: '';
+    @apply absolute -bottom-1 left-0 w-full h-0.5 bg-ark-pink;
+  }
+
+  /* Sticky CTA for mobile */
+  .sticky-cta-mobile {
+    @apply fixed bottom-0 left-0 right-0 p-4 bg-ark-white shadow-elevated z-50 
+           md:hidden border-t border-border;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .gradient-blue {
+    background: var(--gradient-blue);
+  }
+
+  .gradient-hero {
+    background: var(--gradient-hero);
+  }
+
+  .shadow-yellow {
+    box-shadow: var(--shadow-yellow);
+  }
+
+  .shadow-card {
+    box-shadow: var(--shadow-card);
+  }
+
+  .shadow-elevated {
+    box-shadow: var(--shadow-elevated);
   }
 }
