@@ -37,19 +37,10 @@ const Navbar = () => {
         }`}
       >
         <div className="container mx-auto px-4">
-          <div className="flex items-center justify-between h-16 md:h-20">
-            {/* Logo */}
-            <a href="#" className="flex items-center gap-3">
-              <img 
-                src={arkLogo} 
-                alt="ARK Learning Arena" 
-                className="h-10 md:h-12 w-auto rounded"
-              />
-            </a>
-
-            {/* Desktop Navigation */}
-            <div className="hidden md:flex items-center gap-8">
-              {navLinks.map((link) => (
+        <div className="flex items-center justify-between h-16 md:h-20">
+            {/* Desktop Navigation - Left */}
+            <div className="hidden md:flex items-center gap-6 flex-1">
+              {navLinks.slice(0, 3).map((link) => (
                 <a
                   key={link.label}
                   href={link.href}
@@ -60,18 +51,7 @@ const Navbar = () => {
               ))}
             </div>
 
-            {/* CTA Button */}
-            <div className="hidden md:block">
-              <a
-                href="#free-books"
-                className="btn-primary inline-flex items-center gap-2 text-sm"
-              >
-                <FaBook className="text-base" />
-                Get Free Books
-              </a>
-            </div>
-
-            {/* Mobile Menu Button */}
+            {/* Mobile Menu Button - Left on mobile */}
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               className="md:hidden text-ark-white p-2"
@@ -83,6 +63,44 @@ const Navbar = () => {
                 <HiMenu className="w-6 h-6" />
               )}
             </button>
+
+            {/* Logo - Centered */}
+            <a href="#" className="flex items-center gap-3 absolute left-1/2 -translate-x-1/2">
+              <img 
+                src={arkLogo} 
+                alt="ARK Learning Arena" 
+                className="h-10 md:h-12 w-auto rounded"
+              />
+            </a>
+
+            {/* Desktop Navigation - Right */}
+            <div className="hidden md:flex items-center gap-6 flex-1 justify-end">
+              {navLinks.slice(3).map((link) => (
+                <a
+                  key={link.label}
+                  href={link.href}
+                  className="text-ark-white/90 hover:text-ark-yellow transition-colors font-medium text-sm"
+                >
+                  {link.label}
+                </a>
+              ))}
+              <a
+                href="#free-books"
+                className="btn-primary inline-flex items-center gap-2 text-sm"
+              >
+                <FaBook className="text-base" />
+                Get Free Books
+              </a>
+            </div>
+
+            {/* Mobile CTA - Right on mobile */}
+            <a
+              href="#free-books"
+              className="md:hidden btn-primary inline-flex items-center gap-2 text-xs px-3 py-2"
+            >
+              <FaBook className="text-sm" />
+              Free Books
+            </a>
           </div>
         </div>
       </motion.nav>
