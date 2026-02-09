@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { FaBook, FaArrowRight } from 'react-icons/fa';
+import { FaArrowRight } from 'react-icons/fa';
 import { HiSparkles } from 'react-icons/hi2';
 
 const Hero = () => {
@@ -58,53 +58,30 @@ const Hero = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-lg md:text-xl text-ark-white/80 mb-8"
+            className="text-lg md:text-xl text-ark-white/80 mb-10"
           >
-            Online & Offline | Physics • Chemistry • Biology
+            Choose Your Path: <span className="text-ark-yellow font-semibold">Online</span> or <span className="text-ark-yellow font-semibold">Offline</span> | Physics • Chemistry • Biology
           </motion.p>
-
-          {/* FREE BOOK HOOK */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.6, delay: 0.3 }}
-            className="inline-block mb-10"
-          >
-            <div className="bg-ark-yellow text-ark-blue px-6 py-4 rounded-xl shadow-yellow animate-pulse-glow">
-              <div className="flex items-center gap-3 justify-center">
-                <FaBook className="text-2xl" />
-                <div className="text-left">
-                  <p className="font-bold text-lg md:text-xl">
-                    🎁 Get 6 FREE NEET Preparation Books
-                  </p>
-                  <p className="text-sm font-medium opacity-90 relative inline-block">
-                    <span className="accent-underline">When You Enquire Today</span>
-                  </p>
-                </div>
-              </div>
-            </div>
-          </motion.div>
 
           {/* CTA Buttons */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
+            transition={{ duration: 0.6, delay: 0.3 }}
             className="flex flex-col sm:flex-row gap-4 justify-center items-center"
           >
             <a
-              href="#free-books"
+              href="#offline"
               className="btn-primary w-full sm:w-auto inline-flex items-center justify-center gap-2 text-lg px-8 py-4"
             >
-              <FaBook />
-              Unlock Free Books
+              Offline Programme
               <FaArrowRight className="text-sm" />
             </a>
             <a
-              href="#about"
+              href="#online"
               className="btn-secondary w-full sm:w-auto inline-flex items-center justify-center gap-2 text-lg px-8 py-4"
             >
-              Explore Programme
+              Online Programme
             </a>
           </motion.div>
 
