@@ -8,7 +8,13 @@ const Subjects = () => {
       name: 'Physics',
       icon: FaAtom,
       color: 'from-blue-500 to-blue-600',
-      topics: ['Mechanics', 'Thermodynamics', 'Electromagnetism', 'Optics', 'Modern Physics'],
+      topics: [
+        { name: 'Mechanics', emoji: '⚙️' },
+        { name: 'Thermodynamics', emoji: '🌡️' },
+        { name: 'Electromagnetism', emoji: '⚡' },
+        { name: 'Optics', emoji: '🔬' },
+        { name: 'Modern Physics', emoji: '🚀' },
+      ],
     },
     {
       name: 'Chemistry',
@@ -73,8 +79,8 @@ const Subjects = () => {
                 <ul className="space-y-2">
                   {subject.topics.map((topic, i) => (
                     <li key={i} className="flex items-center gap-2 text-muted-foreground">
-                      <span className="w-1.5 h-1.5 bg-ark-yellow rounded-full"></span>
-                      {topic}
+                      <span className="text-lg">{topic.emoji}</span>
+                      {topic.name}
                     </li>
                   ))}
                 </ul>

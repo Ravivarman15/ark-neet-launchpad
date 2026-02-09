@@ -1,5 +1,7 @@
 import { motion } from 'framer-motion';
-import { FaCalendarAlt, FaClock, FaRedo, FaBolt, FaArrowRight } from 'react-icons/fa';
+import { FaCalendarAlt, FaClock, FaRedo, FaBolt, FaArrowRight, FaWhatsapp } from 'react-icons/fa';
+
+const phoneNumber = "917639399217";
 
 const ProgrammeOptions = () => {
   const options = [
@@ -10,6 +12,7 @@ const ProgrammeOptions = () => {
       description: 'Complete preparation starting from Class 11 with systematic coverage',
       features: ['Full syllabus coverage', 'Board + NEET preparation', 'Extended practice time'],
       popular: true,
+      whatsappMessage: "Hi ARK Team, I am interested in the 2-Year Integrated Programme for Class 11 students. Please share more details.",
     },
     {
       title: '1-Year Programme',
@@ -18,6 +21,7 @@ const ProgrammeOptions = () => {
       description: 'Intensive preparation focused on Class 12 and revision',
       features: ['Complete NEET syllabus', 'Intensive testing', 'Focused mentoring'],
       popular: false,
+      whatsappMessage: "Hi ARK Team, I am interested in the 1-Year Programme for Class 12 students. Please share more details.",
     },
     {
       title: 'Repeater / Dropper Programme',
@@ -26,6 +30,7 @@ const ProgrammeOptions = () => {
       description: 'Specialized program for students attempting NEET again',
       features: ['Gap analysis', 'Targeted improvement', 'Mental conditioning'],
       popular: false,
+      whatsappMessage: "Hi ARK Team, I am interested in the Repeater/Dropper Programme. Please share more details.",
     },
     {
       title: 'NEET Crash Course',
@@ -34,6 +39,7 @@ const ProgrammeOptions = () => {
       description: 'Fast-paced revision course for last-minute preparation',
       features: ['Rapid revision', 'Mock test series', 'Key concepts focus'],
       popular: false,
+      whatsappMessage: "Hi ARK Team, I am interested in the NEET Crash Course. Please share more details.",
     },
   ];
 
@@ -104,9 +110,12 @@ const ProgrammeOptions = () => {
               </ul>
 
               <a
-                href="#final-cta"
+                href={`https://wa.me/${phoneNumber}?text=${encodeURIComponent(option.whatsappMessage)}`}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 text-ark-blue font-semibold text-sm group-hover:text-ark-yellow transition-colors"
               >
+                <FaWhatsapp className="text-base" />
                 Learn More
                 <FaArrowRight className="text-xs group-hover:translate-x-1 transition-transform" />
               </a>
