@@ -109,16 +109,14 @@ const ProgrammeOptions = () => {
                 ))}
               </ul>
 
-              <a
-                href={`https://wa.me/${phoneNumber}?text=${encodeURIComponent(option.whatsappMessage)}`}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 text-ark-blue font-semibold text-sm group-hover:text-ark-yellow transition-colors"
+              <button
+                onClick={() => window.open(`https://wa.me/${phoneNumber}?text=${encodeURIComponent(option.whatsappMessage)}`, '_blank', 'noopener,noreferrer')}
+                className="inline-flex items-center gap-2 text-ark-blue font-semibold text-sm group-hover:text-ark-yellow transition-colors cursor-pointer"
               >
                 <FaWhatsapp className="text-base" />
                 Learn More
                 <FaArrowRight className="text-xs group-hover:translate-x-1 transition-transform" />
-              </a>
+              </button>
             </motion.div>
           ))}
         </div>

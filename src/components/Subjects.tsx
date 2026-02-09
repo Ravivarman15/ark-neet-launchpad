@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { FaAtom, FaFlask, FaDna } from 'react-icons/fa';
-import { GiChemicalDrop, GiMolecule, GiFlowerPot, GiFrog } from 'react-icons/gi';
+import { GiChemicalDrop, GiMolecule, GiFlowerPot, GiFrog, GiGears, GiThermometerScale, GiLightningArc, GiPrism, GiAtom } from 'react-icons/gi';
 
 const Subjects = () => {
   const subjects = [
@@ -8,12 +8,12 @@ const Subjects = () => {
       name: 'Physics',
       icon: FaAtom,
       color: 'from-blue-500 to-blue-600',
-      topics: [
-        { name: 'Mechanics', emoji: '⚙️' },
-        { name: 'Thermodynamics', emoji: '🌡️' },
-        { name: 'Electromagnetism', emoji: '⚡' },
-        { name: 'Optics', emoji: '🔬' },
-        { name: 'Modern Physics', emoji: '🚀' },
+      subtopics: [
+        { name: 'Mechanics', icon: GiGears },
+        { name: 'Thermodynamics', icon: GiThermometerScale },
+        { name: 'Electromagnetism', icon: GiLightningArc },
+        { name: 'Optics', icon: GiPrism },
+        { name: 'Modern Physics', icon: GiAtom },
       ],
     },
     {
@@ -75,17 +75,6 @@ const Subjects = () => {
                 <h3 className="text-xl font-bold text-foreground">{subject.name}</h3>
               </div>
 
-              {subject.topics && (
-                <ul className="space-y-2">
-                  {subject.topics.map((topic, i) => (
-                    <li key={i} className="flex items-center gap-2 text-muted-foreground">
-                      <span className="text-lg">{topic.emoji}</span>
-                      {topic.name}
-                    </li>
-                  ))}
-                </ul>
-              )}
-
               {subject.subtopics && (
                 <div className="space-y-3">
                   {subject.subtopics.map((sub, i) => (
@@ -96,6 +85,7 @@ const Subjects = () => {
                   ))}
                 </div>
               )}
+
             </motion.div>
           ))}
         </div>
