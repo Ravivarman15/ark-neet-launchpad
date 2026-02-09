@@ -43,7 +43,7 @@ const FinalCTA = () => {
             </h2>
 
             <p className="text-ark-white/80 text-lg md:text-xl mb-10 max-w-2xl mx-auto">
-              Get expert guidance + <span className="text-ark-yellow font-semibold">6 FREE NEET Books</span> when you enquire today
+              Enroll in our Online or Offline programme and get <span className="text-ark-yellow font-semibold">6 FREE NEET Books</span>
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
@@ -51,11 +51,11 @@ const FinalCTA = () => {
                 href="tel:+919876543210"
                 className="btn-primary w-full sm:w-auto inline-flex items-center justify-center gap-3 text-lg px-8 py-4"
               >
-                <FaBook />
-                Get Free Books & Consultation
+                <FaPhoneAlt />
+                Enquire Now
               </a>
               <a
-                href="https://wa.me/919876543210?text=Hi,%20I%20am%20interested%20in%20the%20NEET%20UG%20Programme%20and%20the%206%20FREE%20Books%20offer."
+                href="https://wa.me/919876543210?text=Hi,%20I%20am%20interested%20in%20the%20NEET%20UG%20Programme."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-secondary w-full sm:w-auto inline-flex items-center justify-center gap-2 text-lg px-8 py-4"
@@ -81,8 +81,8 @@ const FinalCTA = () => {
           href="tel:+919876543210"
           className="btn-primary w-full inline-flex items-center justify-center gap-2 text-base py-3"
         >
-          <FaBook />
-          Get Free Books & Consultation
+          <FaPhoneAlt />
+          Enquire Now
         </a>
       </div>
     </>
