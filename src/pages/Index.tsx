@@ -13,6 +13,7 @@ import BookletInformation from '@/components/BookletInformation';
 import Booklets from '@/components/Booklets';
 import StudentOutcomes from '@/components/StudentOutcomes';
 import WhyARK from '@/components/WhyARK';
+import Testimonials from '@/components/Testimonials';
 import FinalCTA from '@/components/FinalCTA';
 import Footer from '@/components/Footer';
 
@@ -34,6 +35,7 @@ const Index = () => {
       <Booklets />
       <StudentOutcomes />
       <WhyARK />
+      <Testimonials />
       <FinalCTA />
       <Footer />
     </main>

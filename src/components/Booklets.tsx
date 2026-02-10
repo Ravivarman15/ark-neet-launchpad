@@ -132,7 +132,7 @@ const Booklets = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.06 }}
-              className="bg-ark-white rounded-2xl p-6 shadow-card hover:shadow-yellow transition-all duration-300 group"
+              className="bg-ark-white rounded-2xl p-6 shadow-card hover:shadow-yellow transition-all duration-300 group booklet-card"
             >
               {/* Header with Icon & Price */}
               <div className="flex items-start justify-between mb-4">
