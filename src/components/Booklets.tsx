@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
-import { FaBook, FaWhatsapp, FaArrowRight } from 'react-icons/fa';
+import { FaBook, FaWhatsapp, FaArrowRight, FaCheckCircle, FaClock, FaBullseye } from 'react-icons/fa';
+import { GiDna1 } from 'react-icons/gi';
 import { HiCheckCircle } from 'react-icons/hi2';
 
 const phoneNumber = "917639399217";
@@ -104,7 +105,7 @@ const Booklets = () => {
       <div className="absolute bottom-0 right-0 w-80 h-80 bg-ark-yellow/5 rounded-full blur-3xl translate-x-1/4 translate-y-1/2" />
 
       <div className="container mx-auto px-4 relative z-10">
-        {/* Header */}
+        {/* Compelling Header with Clear Value Prop */}
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -113,14 +114,82 @@ const Booklets = () => {
           className="text-center max-w-3xl mx-auto mb-16"
         >
           <span className="text-ark-yellow font-semibold text-sm uppercase tracking-wider">
-            Targeted Boosters
+            Boost Your Score Fast
           </span>
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mt-4 mb-4">
-            High-Impact Booklets
+            6 Proven NEET Study Kits To Improve Scores in Just 60 Days
           </h2>
           <p className="text-muted-foreground text-lg">
-            Strategic study materials designed to maximize your mark conversion. Use with our programme for maximum impact.
+            Strategic topic mastery booklets + revision guides that target high-weightage chapters. Get FREE with enrollment or buy individually.
           </p>
+          
+          {/* Urgency & Guarantee Message */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.4, delay: 0.2 }}
+            className="mt-6 p-3 bg-ark-yellow/10 border border-ark-yellow/30 rounded-lg text-sm text-foreground flex items-center justify-center gap-2"
+          >
+            <FaClock className="text-ark-yellow" />
+            <span className="font-semibold">Limited Time Offer</span> — Claim your FREE study kit with enrollment before spots fill up
+          </motion.div>
+        </motion.div>
+
+        {/* Email Signup Form - Lead Magnet */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+          className="max-w-2xl mx-auto bg-ark-white rounded-2xl p-8 shadow-elevated mb-16 border-2 border-ark-yellow/30"
+        >
+          <h3 className="text-2xl font-bold text-foreground mb-2 text-center flex items-center justify-center gap-2">
+            <FaBook className="text-ark-yellow" />
+            <span>Get Your FREE NEET Study Kit</span>
+          </h3>
+          <p className="text-center text-muted-foreground mb-6">
+            Enter your details below to get instant access to all 6 booklets preview + personalized study roadmap
+          </p>
+          
+          <form className="space-y-4">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <input
+                type="text"
+                placeholder="Your Name"
+                className="px-4 py-3 rounded-lg border border-border bg-secondary focus:outline-none focus:ring-2 focus:ring-ark-yellow"
+                required
+              />
+              <input
+                type="email"
+                placeholder="Your Email"
+                className="px-4 py-3 rounded-lg border border-border bg-secondary focus:outline-none focus:ring-2 focus:ring-ark-yellow"
+                required
+              />
+            </div>
+            
+            <select
+              className="w-full px-4 py-3 rounded-lg border border-border bg-secondary focus:outline-none focus:ring-2 focus:ring-ark-yellow"
+              defaultValue=""
+              required
+            >
+              <option value="">Select Your Class</option>
+              <option value="class-11">Class 11 (Fresh Start)</option>
+              <option value="class-12">Class 12 (Exam Year)</option>
+              <option value="dropper">Dropper/Repeater</option>
+            </select>
+
+            <button
+              type="submit"
+              className="w-full bg-ark-yellow text-ark-blue font-bold py-3 px-6 rounded-lg hover:bg-ark-yellow/90 transition-colors flex items-center justify-center gap-2 text-lg"
+            >
+              <FaArrowRight /> Get My Free Kit Now
+            </button>
+
+            <p className="text-xs text-muted-foreground text-center">
+              ✅ No spam — just resources. You can unsubscribe anytime.
+            </p>
+          </form>
         </motion.div>
 
         {/* Booklet Cards Grid */}
@@ -196,14 +265,14 @@ const Booklets = () => {
                 className="btn-primary w-full inline-flex items-center justify-center gap-2"
               >
                 <FaWhatsapp />
-                Enquire
+                Get This Booklet
                 <FaArrowRight className="text-xs" />
               </button>
             </motion.div>
           ))}
         </div>
 
-        {/* Total Impact Section */}
+        {/* Total Impact Section - Benefits Focused */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -211,30 +280,36 @@ const Booklets = () => {
           transition={{ duration: 0.6 }}
           className="bg-ark-white rounded-2xl p-8 shadow-card mb-16"
         >
-          <h3 className="text-xl font-bold text-foreground mb-6 flex items-center gap-3">
+          <h3 className="text-2xl font-bold text-foreground mb-2 flex items-center gap-3">
             <span className="w-10 h-10 rounded-lg bg-ark-yellow flex items-center justify-center">
               <HiCheckCircle className="text-lg text-ark-blue" />
             </span>
-            Total Impact (Estimated)
+            Realistic Score Impact (When Used Strategically)
           </h3>
+          <p className="text-muted-foreground mb-6">
+            See exactly how each booklet contributes to your final NEET score:
+          </p>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
             {[
-              { label: 'NCERT Line-by-Line', marks: '220–260' },
-              { label: 'PYQ Trend', marks: '120–150' },
-              { label: 'Trap Bank', marks: '40–70' },
-              { label: 'High Weight Areas', marks: '80–110' },
+              { label: 'NCERT Line-by-Line', marks: '220–260', benefit: 'Complete syllabus mastery' },
+              { label: 'PYQ Trend', marks: '120–150', benefit: 'Pattern recognition' },
+              { label: 'Trap Bank', marks: '40–70', benefit: 'Eliminate careless mistakes' },
+              { label: 'High Weight Areas', marks: '80–110', benefit: 'Fast mark boost' },
             ].map((item, idx) => (
-              <div key={idx} className="p-4 rounded-xl bg-secondary hover:bg-ark-yellow/10 transition-colors">
-                <p className="text-sm text-muted-foreground mb-1">{item.label}</p>
-                <p className="text-2xl font-bold text-ark-yellow">{item.marks}</p>
+              <div key={idx} className="p-4 rounded-xl bg-secondary hover:bg-ark-yellow/10 transition-colors border border-border">
+                <p className="text-sm font-semibold text-foreground mb-2">{item.label}</p>
+                <p className="text-2xl font-bold text-ark-yellow mb-2">{item.marks}</p>
+                <p className="text-xs text-muted-foreground italic">{item.benefit}</p>
               </div>
             ))}
           </div>
           <div className="mt-6 p-4 rounded-xl bg-ark-blue">
             <p className="text-ark-white text-center">
-              <span className="text-sm text-ark-white/80">TOTAL WITH STRATEGIC USE</span>
+              <span className="text-sm text-ark-white/80">POTENTIAL SCORE IMPROVEMENT</span>
               <br />
-              <span className="text-2xl font-bold text-ark-yellow">460–590 marks</span>
+              <span className="text-2xl font-bold text-ark-yellow">+110 to +230 marks</span>
+              <br />
+              <span className="text-xs text-ark-white/70 mt-1">Depending on baseline & consistency</span>
             </p>
           </div>
         </motion.div>
@@ -249,87 +324,129 @@ const Booklets = () => {
         >
           <div className="text-center max-w-3xl mx-auto mb-12">
             <span className="text-ark-yellow font-semibold text-sm uppercase tracking-wider">
-              Smart Combinations
+              Two Proven Paths To Success
             </span>
             <h3 className="text-3xl md:text-4xl font-bold text-foreground mt-4">
-              Booklet Bundles
+              Your Choice: FREE With Program or Buy Separately
             </h3>
+            <p className="text-muted-foreground text-lg mt-3">
+              Pick the option that fits your timeline. Most students choose the program for complete guidance.
+            </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {bundles.map((bundle, idx) => (
-              <motion.div
-                key={idx}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: idx * 0.1 }}
-                className={`relative rounded-2xl p-8 shadow-card transition-all duration-300 group ${
-                  bundle.popular ? 'bg-ark-blue text-ark-white border-2 border-ark-yellow' : 'bg-ark-white'
-                }`}
-              >
-                {bundle.popular && (
-                  <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-ark-yellow text-ark-blue text-xs font-bold px-4 py-1.5 rounded-full">
-                    MOST POPULAR
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+            {/* FREE Option - Featured First */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5 }}
+              className="relative rounded-2xl p-8 shadow-yellow border-2 border-ark-yellow bg-ark-blue text-ark-white group order-first md:order-last"
+            >
+              <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-ark-yellow text-ark-blue text-xs font-bold px-6 py-2 rounded-full">
+                🏆 BEST VALUE - RECOMMENDED
+              </div>
+
+              <h4 className="text-2xl font-bold text-ark-white mb-2">
+                Get All 6 Booklets FREE
+              </h4>
+              <p className="text-ark-white/80 text-sm mb-6">
+                Enroll in Online or Offline NEET Program → Get all 6 booklets FREE + personalized guidance
+              </p>
+
+              {/* Price */}
+              <div className="mb-6 p-4 rounded-xl bg-ark-white/10">
+                <p className="text-xs font-semibold uppercase tracking-wider text-ark-white/80 mb-1">
+                  Value
+                </p>
+                <p className="text-3xl font-bold text-ark-yellow">
+                  FREE
+                </p>
+                <p className="text-xs text-ark-white/70 mt-1">Worth ₹4,999</p>
+              </div>
+
+              {/* Benefits */}
+              <div className="mb-6 space-y-3">
+                <p className="text-xs font-semibold uppercase tracking-wider text-ark-white/80 mb-3">
+                  Plus You Get
+                </p>
+                {['Daily live classes & doubt sessions', 'Weekly performance tracking', 'Monthly rank simulations', 'Expert faculty mentorship', 'Peer learning community'].map((benefit, i) => (
+                  <div key={i} className="flex items-center gap-2 text-sm text-ark-white/90">
+                    <span className="text-ark-yellow text-lg">✓</span>
+                    <span>{benefit}</span>
                   </div>
-                )}
+                ))}
+              </div>
 
-                <h4 className={`text-xl font-bold mb-1 ${bundle.popular ? 'text-ark-white' : 'text-foreground'}`}>
-                  {bundle.name}
-                </h4>
-                <p className={`text-sm mb-6 ${bundle.popular ? 'text-ark-white/80' : 'text-muted-foreground'}`}>
-                  {bundle.subtitle}
+              <button
+                onClick={() => window.location.href = '#programme'}
+                className="w-full bg-ark-yellow text-ark-blue font-bold py-3 px-6 rounded-lg hover:bg-ark-white transition-all duration-300 flex items-center justify-center gap-2 text-lg group-hover:shadow-lg"
+              >
+                Start Your Program Now
+                <FaArrowRight className="text-sm" />
+              </button>
+
+              <p className="text-xs text-ark-white/60 text-center mt-4">
+                Most popular choice among serious NEET aspirants
+              </p>
+            </motion.div>
+
+            {/* Buy Only Option */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.1 }}
+              className="rounded-2xl p-8 bg-ark-white shadow-card border border-border"
+            >
+              <h4 className="text-2xl font-bold text-foreground mb-2">
+                Buy Booklets Only
+              </h4>
+              <p className="text-muted-foreground text-sm mb-6">
+                Self-paced learning with our 6 strategic booklets. Perfect for independent learners.
+              </p>
+
+              {/* Price */}
+              <div className="mb-6 p-4 rounded-xl bg-secondary">
+                <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground mb-1">
+                  Price
                 </p>
-
-                {/* Price */}
-                <div className="mb-6 p-4 rounded-xl" style={{ backgroundColor: bundle.popular ? 'rgba(255,255,255,0.1)' : '#f3f4f6' }}>
-                  <p className={`text-xs font-semibold uppercase tracking-wider ${bundle.popular ? 'text-ark-white/80' : 'text-muted-foreground'} mb-1`}>
-                    Price
-                  </p>
-                  <p className={`text-3xl font-bold ${bundle.popular ? 'text-ark-white' : 'text-ark-blue'}`}>
-                    ₹{bundle.price}
-                  </p>
+                <div className="flex items-baseline gap-2">
+                  <p className="text-3xl font-bold text-ark-blue">₹4,999</p>
+                  <p className="text-muted-foreground line-through">₹7,194</p>
                 </div>
+                <p className="text-xs text-muted-foreground mt-1">30% savings on bundled books</p>
+              </div>
 
-                {/* Includes */}
-                <div className="mb-6">
-                  <p className={`text-xs font-semibold uppercase tracking-wider mb-3 ${bundle.popular ? 'text-ark-white/80' : 'text-muted-foreground'}`}>
-                    Includes
-                  </p>
-                  <ul className="space-y-2">
-                    {bundle.includes.map((item, i) => (
-                      <li key={i} className={`text-sm flex items-center gap-2 ${bundle.popular ? 'text-ark-white/90' : 'text-foreground'}`}>
-                        <HiCheckCircle className={bundle.popular ? 'text-ark-yellow' : 'text-ark-yellow'} />
-                        {item}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-
-                {/* For Who */}
-                <p className={`text-xs mb-6 p-3 rounded-lg ${bundle.popular ? 'bg-ark-white/10 text-ark-white/80' : 'bg-secondary text-muted-foreground'}`}>
-                  {bundle.forWho}
+              {/* What's Included */}
+              <div className="mb-6 space-y-3">
+                <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground mb-3">
+                  What You Get
                 </p>
+                {['All 6 strategic booklets', 'Lifetime access', 'Study at your own pace', 'Topic-wise breakdown', 'Success stories inside'].map((item, i) => (
+                  <div key={i} className="flex items-center gap-2 text-sm text-foreground">
+                    <span className="text-ark-yellow text-lg">✓</span>
+                    <span>{item}</span>
+                  </div>
+                ))}
+              </div>
 
-                {/* CTA */}
-                <button
-                  onClick={() => window.open(`https://wa.me/${phoneNumber}?text=${encodeURIComponent(bundle.whatsappMessage)}`, '_blank', 'noopener,noreferrer')}
-                  className={`w-full inline-flex items-center justify-center gap-2 font-semibold py-3 px-4 rounded-lg transition-all duration-300 ${
-                    bundle.popular
-                      ? 'bg-ark-yellow text-ark-blue hover:bg-ark-white'
-                      : 'bg-ark-blue text-ark-white hover:bg-ark-yellow hover:text-ark-blue'
-                  }`}
-                >
-                  <FaWhatsapp />
-                  Get Bundle
-                  <FaArrowRight className="text-xs" />
-                </button>
-              </motion.div>
-            ))}
+              <button
+                onClick={() => window.open(`https://wa.me/${phoneNumber}?text=${encodeURIComponent('Hi ARK Team, I want to buy the booklet bundle. Please share details.')}`, '_blank', 'noopener,noreferrer')}
+                className="w-full bg-ark-blue text-ark-white font-bold py-3 px-6 rounded-lg hover:bg-ark-blue/90 transition-colors flex items-center justify-center gap-2 text-lg"
+              >
+                <FaWhatsapp />
+                Buy Now
+              </button>
+
+              <p className="text-xs text-muted-foreground text-center mt-4">
+                Quick access to study materials
+              </p>
+            </motion.div>
           </div>
         </motion.div>
 
-        {/* Who Should Buy */}
+        {/* Who Should Get These Booklets - Benefits Focused */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -337,29 +454,35 @@ const Booklets = () => {
           transition={{ duration: 0.6 }}
           className="bg-ark-white rounded-2xl p-8 shadow-card mb-12"
         >
-          <h3 className="text-xl font-bold text-foreground mb-8 text-center">Who Should Buy</h3>
+          <h3 className="text-2xl font-bold text-foreground mb-2 text-center">Perfect For These Students</h3>
+          <p className="text-center text-muted-foreground mb-8">These booklets give you the exact edge you need:</p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {[
               {
-                title: 'Weak in Biology',
-                points: ['Need NCERT mastery & diagrams', 'Parents seeking targeted help', 'Want predictable improvement'],
+                title: 'Biology Struggles?',
+                benefits: ['NCERT mastery guides → +70 marks', 'Diagram dominance materials', 'Confusion pair elimination'],
               },
               {
-                title: 'Repeaters / Droppers',
-                points: ['Need minimum-guarantee score', 'Focus on high-return chapters', 'Limited time left'],
+                title: 'Running Out Of Time?',
+                benefits: ['High-weight chapter focus → +85 marks', 'Quick revision shortcuts', 'Last-minute prep guides'],
               },
               {
-                title: 'Serious Aspirants',
-                points: ['Aiming for 600+ score', 'Want complete coverage', 'Need systematic approach'],
+                title: 'Aiming For Excellence?',
+                benefits: ['Complete syllabus coverage → +150 marks', 'PYQ pattern mastery', 'Competitive edge strategies'],
               },
             ].map((segment, idx) => (
-              <div key={idx} className="p-6 rounded-xl bg-secondary hover:bg-ark-yellow/10 transition-colors">
-                <h4 className="font-bold text-foreground mb-4">{segment.title}</h4>
-                <ul className="space-y-2">
-                  {segment.points.map((point, i) => (
-                    <li key={i} className="flex items-start gap-2 text-sm text-muted-foreground">
+              <div key={idx} className="p-6 rounded-xl bg-secondary hover:shadow-elevated hover:bg-ark-yellow/5 transition-all border border-border">
+                <h4 className="font-bold text-foreground mb-4 text-lg flex items-center gap-2">
+                  {idx === 0 && <GiDna1 className="text-ark-yellow" />}
+                  {idx === 1 && <FaClock className="text-ark-yellow" />}
+                  {idx === 2 && <FaBullseye className="text-ark-yellow" />}
+                  <span>{segment.title}</span>
+                </h4>
+                <ul className="space-y-3">
+                  {segment.benefits.map((benefit, i) => (
+                    <li key={i} className="flex items-start gap-2 text-sm text-foreground">
                       <span className="w-1.5 h-1.5 bg-ark-yellow rounded-full flex-shrink-0 mt-1.5"></span>
-                      <span>{point}</span>
+                      <span>{benefit}</span>
                     </li>
                   ))}
                 </ul>
@@ -376,14 +499,24 @@ const Booklets = () => {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="text-center"
         >
-          <button
-            onClick={() => window.open(`https://wa.me/${phoneNumber}?text=${encodeURIComponent('Hi ARK Team, I want to buy booklets. Please share details.')}`, '_blank', 'noopener,noreferrer')}
-            className="btn-primary inline-flex items-center gap-2 text-lg px-8 py-4 cursor-pointer"
-          >
-            <FaWhatsapp className="text-xl" />
-            Start With Booklets Now
-            <FaArrowRight className="text-sm" />
-          </button>
+          <h3 className="text-2xl font-bold text-foreground mb-4">Ready To Boost Your NEET Score?</h3>
+          <p className="text-muted-foreground mb-8 max-w-2xl mx-auto">
+            Choose your path below. The FREE option with enrollment includes live guidance + all booklets. The buy option gives you instant access to study materials.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a 
+              href="#programme"
+              className="btn-primary inline-flex items-center gap-2 text-lg px-8 py-4 cursor-pointer"
+            >
+              <FaCheckCircle /> Get FREE With Program
+            </a>
+            <button
+              onClick={() => window.open(`https://wa.me/${phoneNumber}?text=${encodeURIComponent('Hi ARK Team, I want to buy the booklets. Please share details.')}`, '_blank', 'noopener,noreferrer')}
+              className="btn-secondary inline-flex items-center gap-2 text-lg px-8 py-4"
+            >
+              <FaWhatsapp /> Buy Booklets Only
+            </button>
+          </div>
         </motion.div>
       </div>
     </section>

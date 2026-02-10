@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { FaArrowRight } from 'react-icons/fa';
+import { FaArrowRight, FaGraduationCap, FaBook } from 'react-icons/fa';
 import { HiSparkles } from 'react-icons/hi2';
 
 const Hero = () => {
@@ -13,7 +13,7 @@ const Hero = () => {
             opacity: [0.1, 0.15, 0.1]
           }}
           transition={{ duration: 8, repeat: Infinity }}
-          className="absolute -top-1/4 -right-1/4 w-1/2 h-1/2 bg-ark-yellow/10 rounded-full blur-3xl"
+          className="absolute -top-1/4 -right-1/4 w-1/2 h-1/2 bg-ark-yellow/10 rounded-full"
         />
         <motion.div
           animate={{ 
@@ -21,7 +21,7 @@ const Hero = () => {
             opacity: [0.05, 0.1, 0.05]
           }}
           transition={{ duration: 10, repeat: Infinity, delay: 1 }}
-          className="absolute -bottom-1/4 -left-1/4 w-1/2 h-1/2 bg-ark-yellow/5 rounded-full blur-3xl"
+          className="absolute -bottom-1/4 -left-1/4 w-1/2 h-1/2 bg-ark-yellow/5 rounded-full"
         />
       </div>
 
@@ -47,69 +47,72 @@ const Hero = () => {
             transition={{ duration: 0.6, delay: 0.1 }}
             className="text-4xl md:text-5xl lg:text-6xl font-bold text-ark-white leading-tight mb-6"
           >
-            Crack NEET with a{' '}
-            <span className="text-ark-yellow">Structured,</span>{' '}
+            NEET Success Kit:{' '}
+            <span className="text-ark-yellow">Structured Class system + 6 Free Booklets</span>{' '}
             <br className="hidden md:block" />
-            Test-Driven Learning System
+            to Improve Your Score Predictably
           </motion.h1>
 
-          {/* Subline */}
+          {/* Subline - Benefits Focused */}
           <motion.p
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-lg md:text-xl text-ark-white/80 mb-10"
           >
-            Choose Your Path: <span className="text-ark-yellow font-semibold">Online</span> or <span className="text-ark-yellow font-semibold">Offline</span> | Physics • Chemistry • Biology
+            <span className="font-semibold text-ark-yellow">Get all 6 strategic booklets FREE</span> when you enroll + daily live classes, performance tracking & mentorship. <br className="hidden md:block" />
+            Or buy booklets separately for self-paced learning. Choose your path now.
           </motion.p>
 
-          {/* CTA Buttons */}
+          {/* CTA Buttons - Outcome Focused */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
-            className="flex flex-col sm:flex-row gap-4 justify-center items-center"
+            className="flex flex-col sm:flex-row gap-4 justify-center items-center mt-8"
           >
             <a
-              href="#offline"
+              href="#online"
               className="btn-primary w-full sm:w-auto inline-flex items-center justify-center gap-2 text-lg px-8 py-4"
             >
-              Offline Programme
+              <FaGraduationCap />
+              Get FREE Booklets + Online Class
               <FaArrowRight className="text-sm" />
             </a>
             <a
-              href="#online"
+              href="#offline"
               className="btn-secondary w-full sm:w-auto inline-flex items-center justify-center gap-2 text-lg px-8 py-4"
             >
-              Online Programme
+              <FaBook />
+              Join Offline Program
+              <FaArrowRight className="text-sm" />
             </a>
           </motion.div>
 
-          {/* Trust indicators */}
+          {/* Trust indicators - Social Proof */}
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.6, delay: 0.6 }}
-            className="mt-12 flex flex-wrap justify-center gap-6 md:gap-10 text-ark-white/60 text-sm"
+            className="mt-12 flex flex-wrap justify-center gap-4 md:gap-6"
           >
-            <div className="flex items-center gap-2">
+            <div className="flex items-center gap-2 bg-ark-yellow/15 border border-ark-yellow/30 rounded-lg px-4 py-2">
               <span className="w-2 h-2 bg-ark-yellow rounded-full"></span>
-              NCERT-Aligned
+              <span className="text-sm"><strong className="text-ark-yellow">650+ Students</strong> <span className="text-ark-white/80">crossed 600+ marks</span></span>
             </div>
-            <div className="flex items-center gap-2">
-              <span className="w-2 h-2 bg-ark-yellow rounded-full"></span>
-              Expert Faculty
+            <div className="flex items-center gap-2 bg-ark-blue/20 border border-ark-blue/40 rounded-lg px-4 py-2">
+              <span className="w-2 h-2 bg-ark-blue rounded-full"></span>
+              <span className="text-sm"><strong className="text-ark-white">Expert Faculty</strong> <span className="text-ark-white/80">with 10+ years experience</span></span>
             </div>
-            <div className="flex items-center gap-2">
-              <span className="w-2 h-2 bg-ark-yellow rounded-full"></span>
-              Continuous Testing
+            <div className="flex items-center gap-2 bg-ark-yellow/10 border border-ark-yellow/20 rounded-lg px-4 py-2">
+              <span className="w-2 h-2 bg-ark-yellow/80 rounded-full"></span>
+              <span className="text-sm"><strong className="text-ark-white">Proven System</strong> <span className="text-ark-white/80">— NCERT+PYQ focused</span></span>
             </div>
           </motion.div>
         </div>
       </div>
 
-      {/* Bottom gradient fade */}
-      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background to-transparent"></div>
+      {/* Bottom gradient removed to keep background uniform */}
     </section>
   );
 };

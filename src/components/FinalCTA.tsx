@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { FaPhoneAlt, FaWhatsapp } from 'react-icons/fa';
+import { FaWhatsapp, FaClock, FaArrowRight } from 'react-icons/fa';
 import { HiSparkles } from 'react-icons/hi2';
 
 const phoneNumber = "917639399217";
@@ -38,54 +38,52 @@ const FinalCTA = () => {
               className="inline-flex items-center gap-2 bg-ark-yellow/20 text-ark-yellow px-4 py-2 rounded-full mb-8"
             >
               <HiSparkles />
-              <span className="font-semibold text-sm">Limited Time Offer</span>
+              <FaClock className="text-ark-yellow" />
+              <span className="font-semibold text-sm">Limited spots available this month</span>
             </motion.div>
 
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-ark-white mb-6">
-              Start Your NEET Journey{' '}
-              <span className="text-ark-yellow">the Right Way</span>
+              Ready To Boost Your NEET Score By{' '}
+              <span className="text-ark-yellow">+100 to +200 Marks?</span>
             </h2>
 
             <p className="text-ark-white/80 text-lg md:text-xl mb-10 max-w-2xl mx-auto">
-              Enroll in our Online or Offline programme and get <span className="text-ark-yellow font-semibold">6 FREE NEET Books</span>
+              <span className="font-semibold">Enroll now to get 6 FREE strategic study books + live classes + mentorship.</span> Most enrolled students see improvements within 30 days.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
               <a
-                href="tel:+919876543210"
+                href="#programme"
                 className="btn-primary w-full sm:w-auto inline-flex items-center justify-center gap-3 text-lg px-8 py-4"
               >
-                <FaPhoneAlt />
-                Enquire Now
+                <span>See Programs & Enroll</span>
+                <FaArrowRight />
               </a>
               <button
                 onClick={() => window.open(whatsappURL, '_blank', 'noopener,noreferrer')}
                 className="btn-secondary w-full sm:w-auto inline-flex items-center justify-center gap-2 text-lg px-8 py-4 cursor-pointer"
               >
                 <FaWhatsapp className="text-xl" />
-                WhatsApp Us
+                WhatsApp Your Questions
               </button>
             </div>
 
-            <div className="flex flex-wrap justify-center gap-6 text-ark-white/60 text-sm">
-              <a href="tel:+919876543210" className="flex items-center gap-2 hover:text-ark-yellow transition-colors">
-                <FaPhoneAlt />
-                +91 98765 43210
-              </a>
-            </div>
+            <p className="text-ark-white/60 text-sm">
+              ✅ Free consultation • No commitment needed • Chat with our NEET experts
+            </p>
           </motion.div>
         </div>
       </section>
 
-      {/* Sticky Mobile CTA */}
+      {/* Sticky Mobile CTA - Only show if not in view */}
       <div className="sticky-cta-mobile">
-        <a
-          href="tel:+919876543210"
+        <button
+          onClick={() => window.open(whatsappURL, '_blank', 'noopener,noreferrer')}
           className="btn-primary w-full inline-flex items-center justify-center gap-2 text-base py-3"
         >
-          <FaPhoneAlt />
-          Enquire Now
-        </a>
+          <FaWhatsapp />
+          Chat on WhatsApp
+        </button>
       </div>
     </>
   );

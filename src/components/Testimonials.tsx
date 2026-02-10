@@ -38,6 +38,36 @@ const Testimonials = () => {
       </div>
 
       <div className="container mx-auto px-4 relative z-10">
+        {/* Social Proof Stats */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+          className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto mb-16"
+        >
+          {[
+            { stat: '650+', label: 'Students Score 600+' },
+            { stat: '95%', label: 'Success Rate' },
+            { stat: '1000+', label: 'Score Improvements' },
+            { stat: '10+ Yrs', label: 'Expert Guidance' },
+          ].map((item, idx) => (
+            <motion.div
+              key={idx}
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.3, delay: idx * 0.1 }}
+              className="bg-ark-white/10 backdrop-blur-sm border border-ark-white/20 rounded-xl p-6 text-center"
+            >
+              <p className="text-3xl md:text-4xl font-bold text-ark-yellow mb-2">
+                {item.stat}
+              </p>
+              <p className="text-ark-white/80 text-sm">{item.label}</p>
+            </motion.div>
+          ))}
+        </motion.div>
+
         {/* Section Header */}
         <motion.div
           initial={{ opacity: 0, y: 40 }}
@@ -47,13 +77,13 @@ const Testimonials = () => {
           className="text-center max-w-3xl mx-auto mb-16"
         >
           <span className="text-ark-yellow font-semibold text-sm uppercase tracking-wider">
-            Student Success Stories
+            Real Student Results
           </span>
           <h2 className="text-3xl md:text-4xl font-bold text-ark-white mt-4 mb-4">
-            Results That Build Trust
+            See What Our Students Achieved
           </h2>
           <p className="text-ark-white/80 text-lg">
-            Real improvement. Real ranks. Real confidence.
+            Scroll through real testimonials from students who improved their NEET scores using our system.
           </p>
         </motion.div>
 
@@ -108,9 +138,12 @@ const Testimonials = () => {
           transition={{ duration: 0.5, delay: 0.3 }}
           className="flex justify-center"
         >
-          <button className="bg-ark-yellow hover:bg-ark-yellow/90 text-ark-blue font-bold py-4 px-10 rounded-xl transition-all duration-300 text-lg shadow-lg hover:shadow-xl transform hover:-translate-y-1">
-            Start Your Improvement
-          </button>
+          <a
+            href="#programme"
+            className="bg-ark-yellow hover:bg-ark-yellow/90 text-ark-blue font-bold py-4 px-10 rounded-xl transition-all duration-300 text-lg shadow-lg hover:shadow-xl transform hover:-translate-y-1 inline-flex items-center gap-2"
+          >
+            ✅ Join 650+ Top Scorers Now
+          </a>
         </motion.div>
       </div>
     </section>
