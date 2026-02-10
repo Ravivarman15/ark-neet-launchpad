@@ -9,6 +9,7 @@ import PerformanceTracking from '@/components/PerformanceTracking';
 import OfflineProgramme from '@/components/OfflineProgramme';
 import OnlineProgramme from '@/components/OnlineProgramme';
 import ProgrammeOptions from '@/components/ProgrammeOptions';
+import BookletInformation from '@/components/BookletInformation';
 import StudentOutcomes from '@/components/StudentOutcomes';
 import WhyARK from '@/components/WhyARK';
 import FinalCTA from '@/components/FinalCTA';
@@ -28,6 +29,7 @@ const Index = () => {
       <OfflineProgramme />
       <OnlineProgramme />
       <ProgrammeOptions />
+      <BookletInformation />
       <StudentOutcomes />
       <WhyARK />
       <FinalCTA />
