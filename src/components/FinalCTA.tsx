@@ -3,7 +3,7 @@ import { FaPhoneAlt, FaWhatsapp } from 'react-icons/fa';
 import { HiSparkles } from 'react-icons/hi2';
 
 const phoneNumber = "917639399217";
-const message = "Hi ARK Team, I reviewed the NEET programme and I would like to get the 6 FREE books and consultation.";
+const message = "Hi ARK Team, I reviewed my diagnostic report and would like to proceed with consulting.";
 const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
 
 const FinalCTA = () => {
