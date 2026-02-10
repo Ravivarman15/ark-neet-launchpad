@@ -58,13 +58,15 @@ const FinalCTA = () => {
                 <FaPhoneAlt />
                 Enquire Now
               </a>
-              <button
-                onClick={() => window.open(whatsappURL, '_blank', 'noopener,noreferrer')}
-                className="btn-secondary w-full sm:w-auto inline-flex items-center justify-center gap-2 text-lg px-8 py-4 cursor-pointer"
+              <a
+                href={whatsappURL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-secondary w-full sm:w-auto inline-flex items-center justify-center gap-2 text-lg px-8 py-4"
               >
                 <FaWhatsapp className="text-xl" />
                 WhatsApp Us
-              </button>
+              </a>
             </div>
 
             <div className="flex flex-wrap justify-center gap-6 text-ark-white/60 text-sm">
