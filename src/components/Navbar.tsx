@@ -69,7 +69,7 @@ const Navbar = () => {
               <img 
                 src={arkLogo} 
                 alt="ARK Learning Arena" 
-                className="h-10 md:h-12 w-auto rounded"
+                className="h-18 md:h-20 w-auto rounded"
               />
             </a>
 
