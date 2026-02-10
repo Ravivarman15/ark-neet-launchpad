@@ -4,19 +4,19 @@ import { HiAcademicCap, HiCurrencyRupee } from 'react-icons/hi2';
 
 const FreeBooksBanner = () => {
   const books = [
-    { title: 'Physics Fundamentals', subject: 'Physics' },
-    { title: 'Chemistry Essentials', subject: 'Chemistry' },
-    { title: 'Biology Concepts', subject: 'Biology' },
-    { title: 'MCQ Practice Vol. 1', subject: 'Practice' },
-    { title: 'MCQ Practice Vol. 2', subject: 'Practice' },
-    { title: 'Previous Year Questions', subject: 'PYQ' },
+    { title: 'CORE 100', subject: 'Safety Net' },
+    { title: 'BIOLOGY 360', subject: 'Mastery' },
+    { title: 'NCERT Line-by-Line', subject: 'Predictor' },
+    { title: 'PYQ Pattern', subject: 'Forecaster' },
+    { title: 'Trap & Confusion', subject: 'Bank' },
+    { title: 'High Weight Areas', subject: 'Booster' },
   ];
 
   const bookFeatures = [
-    'NCERT-aligned content',
-    'MCQ practice & revision',
-    'Previous 15 years PYQs',
-    'Designed for NEET pattern',
+    'Targeted mark improvement',
+    'NCERT-aligned questions',
+    'Pattern & trend analysis',
+    'Quick revision tools',
   ];
 
   return (
@@ -37,10 +37,10 @@ const FreeBooksBanner = () => {
             Study Materials
           </span>
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mt-4 mb-4">
-            6 Essential NEET Preparation Books
+            6 Essential NEET Preparation Booklets
           </h2>
           <p className="text-muted-foreground text-lg">
-            Comprehensive study materials designed to strengthen your NEET preparation
+            High-impact study materials designed to maximize your marks with targeted preparation
           </p>
         </motion.div>
 
@@ -102,23 +102,23 @@ const FreeBooksBanner = () => {
               </div>
 
               <h3 className="text-xl font-bold text-foreground mb-2">
-                Buy Books Only
+                Buy Booklets Only
               </h3>
               <p className="text-muted-foreground text-sm mb-4">
-                Get all 6 NEET preparation books without enrolling in any programme
+                Get all 6 strategic booklets designed to improve your NEET score
               </p>
 
               <div className="flex items-baseline gap-2 mb-6">
-                <span className="text-3xl font-bold text-ark-blue">₹2,999</span>
-                <span className="text-muted-foreground line-through text-sm">₹4,999</span>
+                <span className="text-3xl font-bold text-ark-blue">₹4,999</span>
+                <span className="text-muted-foreground line-through text-sm">₹7,194</span>
               </div>
 
               <a
-                href="#final-cta"
+                href="#booklets"
                 className="w-full inline-flex items-center justify-center gap-2 bg-ark-blue text-ark-white font-semibold py-3 px-6 rounded-xl hover:bg-ark-blue/90 transition-colors"
               >
                 <FaShoppingCart />
-                Buy Now
+                Buy Booklets
               </a>
             </motion.div>
 
@@ -140,20 +140,20 @@ const FreeBooksBanner = () => {
               </div>
 
               <h3 className="text-xl font-bold text-ark-white mb-2">
-                Get Books FREE
+                Get All Booklets FREE
               </h3>
               <p className="text-ark-white/80 text-sm mb-4">
-                Enroll in our Online or Offline NEET Programme and receive all 6 books absolutely free!
+                Enroll in our Online or Offline NEET Programme and receive all 6 strategic booklets absolutely free!
               </p>
 
               <div className="flex items-baseline gap-2 mb-6">
                 <span className="text-3xl font-bold text-ark-yellow">FREE</span>
-                <span className="text-ark-white/60 line-through text-sm">₹2,999</span>
+                <span className="text-ark-white/60 line-through text-sm">₹4,999</span>
                 <span className="text-ark-white/80 text-sm">with enrollment</span>
               </div>
 
               <a
-                href="#programmes"
+                href="#programme"
                 className="w-full inline-flex items-center justify-center gap-2 bg-ark-yellow text-ark-blue font-semibold py-3 px-6 rounded-xl hover:bg-ark-yellow/90 transition-colors"
               >
                 <FaGraduationCap />
