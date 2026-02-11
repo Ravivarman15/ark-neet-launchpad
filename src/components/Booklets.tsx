@@ -202,73 +202,101 @@ const Booklets = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.06 }}
-              className="bg-ark-white rounded-2xl p-6 shadow-card hover:shadow-yellow transition-all duration-300 group booklet-card"
+              className="relative rounded-2xl p-6 transition-all duration-300 group booklet-card overflow-hidden"
+              style={{
+                background: 'linear-gradient(135deg, rgba(255, 213, 0, 0.08) 0%, rgba(255, 255, 255, 0.95) 100%)',
+                boxShadow: 'inset 0 1px 0 rgba(255, 213, 0, 0.4), inset 0 -1px 0 rgba(0, 0, 0, 0.05), 0 10px 25px rgba(0, 0, 0, 0.1), 0 0 30px rgba(255, 213, 0, 0.15)',
+                border: '2px solid rgba(255, 213, 0, 0.3)',
+              }}
             >
-              {/* Header with Icon & Price */}
-              <div className="flex items-start justify-between mb-4">
-                <div className="w-12 h-12 rounded-xl bg-ark-blue flex items-center justify-center group-hover:bg-ark-yellow transition-colors">
-                  <FaBook className="text-xl text-ark-white group-hover:text-ark-blue" />
+              {/* Yellow Emboss Highlight - Top */}
+              <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-ark-yellow to-transparent opacity-60" />
+              
+              {/* Subtle Yellow Glow on Hover */}
+              <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                style={{
+                  boxShadow: 'inset 0 0 20px rgba(255, 213, 0, 0.2)',
+                }}
+              />
+
+              <div className="relative z-10">
+                {/* Header with Icon & Price */}
+                <div className="flex items-start justify-between mb-4">
+                  <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-ark-blue to-ark-blue/80 flex items-center justify-center group-hover:from-ark-yellow group-hover:to-ark-yellow/80 transition-all duration-300 shadow-lg"
+                    style={{
+                      boxShadow: 'inset 0 1px 0 rgba(255, 255, 255, 0.3), 0 4px 12px rgba(0, 0, 0, 0.2)',
+                    }}
+                  >
+                    <FaBook className="text-xl text-ark-white group-hover:text-ark-blue transition-colors" />
+                  </div>
+                  <div className="text-right">
+                    <div className="text-2xl font-bold bg-gradient-to-r from-ark-blue to-ark-yellow bg-clip-text text-transparent">₹{booklet.price}</div>
+                  </div>
                 </div>
-                <div className="text-right">
-                  <div className="text-2xl font-bold text-ark-blue">₹{booklet.price}</div>
+
+                {/* Title */}
+                <div className="mb-5">
+                  <h3 className="text-lg font-bold text-foreground">{booklet.title}</h3>
+                  <p className="text-sm text-ark-yellow font-semibold drop-shadow-sm">{booklet.subtitle}</p>
                 </div>
-              </div>
 
-              {/* Title */}
-              <div className="mb-5">
-                <h3 className="text-lg font-bold text-foreground">{booklet.title}</h3>
-                <p className="text-sm text-ark-yellow font-semibold">{booklet.subtitle}</p>
-              </div>
-
-              {/* Speciality */}
-              <div className="mb-5 pb-5 border-b border-border">
-                <h4 className="text-xs font-semibold text-foreground uppercase tracking-wider mb-3">
-                  Speciality
-                </h4>
-                <ul className="space-y-2">
-                  {booklet.speciality.map((item, i) => (
-                    <li key={i} className="flex items-center gap-2 text-sm text-muted-foreground">
-                      <span className="w-1.5 h-1.5 bg-ark-yellow rounded-full flex-shrink-0"></span>
-                      {item}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-
-              {/* How to Use */}
-              <div className="mb-5 pb-5 border-b border-border">
-                <h4 className="text-xs font-semibold text-foreground uppercase tracking-wider mb-3">
-                  How to Use
-                </h4>
-                <ul className="space-y-2">
-                  {booklet.use.map((item, i) => (
-                    <li key={i} className="flex items-start gap-2 text-sm text-muted-foreground">
-                      <span className="w-1.5 h-1.5 bg-ark-blue rounded-full flex-shrink-0 mt-1"></span>
-                      <span>{item}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-
-              {/* Outcome */}
-              <div className="mb-6 p-4 rounded-xl bg-ark-yellow/10 border border-ark-yellow/20">
-                <div className="flex items-center gap-2 text-sm font-semibold text-ark-blue">
-                  <HiCheckCircle className="text-ark-yellow" />
-                  {booklet.outcome}
+                {/* Speciality */}
+                <div className="mb-5 pb-5 border-b border-ark-yellow/30">
+                  <h4 className="text-xs font-semibold text-foreground uppercase tracking-wider mb-3">
+                    Speciality
+                  </h4>
+                  <ul className="space-y-2">
+                    {booklet.speciality.map((item, i) => (
+                      <li key={i} className="flex items-center gap-2 text-sm text-muted-foreground">
+                        <span className="w-1.5 h-1.5 bg-gradient-to-br from-ark-yellow to-ark-yellow/70 rounded-full flex-shrink-0 shadow-sm"></span>
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
                 </div>
-              </div>
 
-              {/* CTA Button */}
-              <button
-                onClick={() =>
-                  window.open(`https://wa.me/${phoneNumber}?text=${encodeURIComponent(booklet.whatsappMessage)}`, '_blank', 'noopener,noreferrer')
-                }
-                className="btn-primary w-full inline-flex items-center justify-center gap-2"
-              >
-                <FaWhatsapp />
-                Get This Booklet
-                <FaArrowRight className="text-xs" />
-              </button>
+                {/* How to Use */}
+                <div className="mb-5 pb-5 border-b border-ark-yellow/30">
+                  <h4 className="text-xs font-semibold text-foreground uppercase tracking-wider mb-3">
+                    How to Use
+                  </h4>
+                  <ul className="space-y-2">
+                    {booklet.use.map((item, i) => (
+                      <li key={i} className="flex items-start gap-2 text-sm text-muted-foreground">
+                        <span className="w-1.5 h-1.5 bg-ark-blue rounded-full flex-shrink-0 mt-1"></span>
+                        <span>{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                {/* Outcome */}
+                <div className="mb-6 p-4 rounded-xl transition-all duration-300"
+                  style={{
+                    background: 'linear-gradient(135deg, rgba(255, 213, 0, 0.15) 0%, rgba(255, 213, 0, 0.08) 100%)',
+                    boxShadow: 'inset 0 1px 0 rgba(255, 213, 0, 0.3), 0 4px 12px rgba(255, 213, 0, 0.1)',
+                    border: '1.5px solid rgba(255, 213, 0, 0.25)',
+                  }}
+                >
+                  <div className="flex items-center gap-2 text-sm font-semibold text-ark-blue">
+                    <HiCheckCircle className="text-ark-yellow drop-shadow-sm" />
+                    {booklet.outcome}
+                  </div>
+                </div>
+
+                {/* CTA Button */}
+                <button
+                  onClick={() =>
+                    window.open(`https://wa.me/${phoneNumber}?text=${encodeURIComponent(booklet.whatsappMessage)}`, '_blank', 'noopener,noreferrer')
+                  }
+                  className="btn-primary w-full inline-flex items-center justify-center gap-2 relative overflow-hidden group/btn"
+                >
+                  <span className="absolute inset-0 bg-gradient-to-r from-ark-yellow/0 via-ark-white/20 to-ark-yellow/0 opacity-0 group-hover/btn:opacity-100 transition-opacity duration-300" />
+                  <FaWhatsapp />
+                  Get This Booklet
+                  <FaArrowRight className="text-xs" />
+                </button>
+              </div>
             </motion.div>
           ))}
         </div>

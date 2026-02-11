@@ -53,17 +53,38 @@ const FreeBooksBanner = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.4, delay: index * 0.1 }}
-              className="bg-ark-white rounded-xl p-4 shadow-card hover:shadow-elevated transition-shadow text-center group"
+              className="relative rounded-xl p-4 transition-all duration-300 text-center group overflow-hidden"
+              style={{
+                background: 'linear-gradient(135deg, rgba(255, 213, 0, 0.08) 0%, rgba(255, 255, 255, 0.95) 100%)',
+                boxShadow: 'inset 0 1px 0 rgba(255, 213, 0, 0.4), inset 0 -1px 0 rgba(0, 0, 0, 0.05), 0 8px 20px rgba(0, 0, 0, 0.08), 0 0 20px rgba(255, 213, 0, 0.12)',
+                border: '1.5px solid rgba(255, 213, 0, 0.3)',
+              }}
             >
-              <div className="w-12 h-12 mx-auto bg-ark-blue/10 rounded-lg flex items-center justify-center mb-3 group-hover:bg-ark-yellow/20 transition-colors">
-                <FaBook className="text-ark-blue text-xl" />
+              {/* Yellow Emboss Highlight - Top */}
+              <div className="absolute top-0 left-0 right-0 h-0.5 bg-gradient-to-r from-transparent via-ark-yellow to-transparent opacity-60" />
+              
+              {/* Subtle Yellow Glow on Hover */}
+              <div className="absolute inset-0 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                style={{
+                  boxShadow: 'inset 0 0 15px rgba(255, 213, 0, 0.2)',
+                }}
+              />
+
+              <div className="relative z-10">
+                <div className="w-12 h-12 mx-auto bg-gradient-to-br from-ark-blue to-ark-blue/80 rounded-lg flex items-center justify-center mb-3 group-hover:from-ark-yellow group-hover:to-ark-yellow/80 transition-all duration-300 shadow-lg"
+                  style={{
+                    boxShadow: 'inset 0 1px 0 rgba(255, 255, 255, 0.3), 0 3px 10px rgba(0, 0, 0, 0.15)',
+                  }}
+                >
+                  <FaBook className="text-ark-white text-xl group-hover:text-ark-blue transition-colors" />
+                </div>
+                <span className="text-xs font-semibold text-ark-yellow bg-gradient-to-r from-ark-yellow/20 to-ark-yellow/10 px-2 py-0.5 rounded border border-ark-yellow/30 inline-block drop-shadow-sm">
+                  {book.subject}
+                </span>
+                <h4 className="text-sm font-semibold text-foreground mt-2 leading-tight">
+                  {book.title}
+                </h4>
               </div>
-              <span className="text-xs font-semibold text-ark-yellow bg-ark-yellow/10 px-2 py-0.5 rounded">
-                {book.subject}
-              </span>
-              <h4 className="text-sm font-semibold text-foreground mt-2 leading-tight">
-                {book.title}
-              </h4>
             </motion.div>
           ))}
         </div>
