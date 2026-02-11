@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { FaStar } from 'react-icons/fa';
+import { FaStar, FaCheckCircle } from 'react-icons/fa';
 
 const testimonials = [
   {
@@ -142,7 +142,8 @@ const Testimonials = () => {
             href="#programme"
             className="bg-ark-yellow hover:bg-ark-yellow/90 text-ark-blue font-bold py-4 px-10 rounded-xl transition-all duration-300 text-lg shadow-lg hover:shadow-xl transform hover:-translate-y-1 inline-flex items-center gap-2"
           >
-            ✅ Join 650+ Top Scorers Now
+            <FaCheckCircle className="text-ark-blue" />
+            <span>Join 650+ Top Scorers Now</span>
           </a>
         </motion.div>
       </div>

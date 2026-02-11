@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { FaBook, FaWhatsapp, FaArrowRight, FaCheckCircle, FaClock, FaBullseye } from 'react-icons/fa';
+import { FaBook, FaWhatsapp, FaArrowRight, FaCheckCircle, FaClock, FaBullseye, FaTrophy } from 'react-icons/fa';
 import { GiDna1 } from 'react-icons/gi';
 import { HiCheckCircle } from 'react-icons/hi2';
 
@@ -186,8 +186,9 @@ const Booklets = () => {
               <FaArrowRight /> Get My Free Kit Now
             </button>
 
-            <p className="text-xs text-muted-foreground text-center">
-              ✅ No spam — just resources. You can unsubscribe anytime.
+            <p className="text-xs text-muted-foreground text-center flex items-center justify-center gap-1">
+              <FaCheckCircle className="text-ark-yellow text-sm" />
+              <span>No spam — just resources. You can unsubscribe anytime.</span>
             </p>
           </form>
         </motion.div>
@@ -343,8 +344,9 @@ const Booklets = () => {
               transition={{ duration: 0.5 }}
               className="relative rounded-2xl p-8 shadow-yellow border-2 border-ark-yellow bg-ark-blue text-ark-white group order-first md:order-last"
             >
-              <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-ark-yellow text-ark-blue text-xs font-bold px-6 py-2 rounded-full">
-                🏆 BEST VALUE - RECOMMENDED
+              <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-ark-yellow text-ark-blue text-xs font-bold px-6 py-2 rounded-full flex items-center gap-1.5">
+                <FaTrophy className="text-sm" />
+                <span>BEST VALUE - RECOMMENDED</span>
               </div>
 
               <h4 className="text-2xl font-bold text-ark-white mb-2">

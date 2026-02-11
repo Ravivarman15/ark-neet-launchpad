@@ -45,7 +45,7 @@ const Hero = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="text-4xl md:text-5xl lg:text-6xl font-bold text-ark-white leading-tight mb-6"
+            className="text-3xl md:text-4xl lg:text-5xl font-bold text-ark-white leading-tight mb-6"
           >
             NEET Success Kit:{' '}
             <span className="text-ark-yellow">Structured Class system + 6 Free Booklets</span>{' '}
@@ -58,7 +58,7 @@ const Hero = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-lg md:text-xl text-ark-white/80 mb-10"
+            className="text-base md:text-lg text-ark-white/80 mb-10"
           >
             <span className="font-semibold text-ark-yellow">Get all 6 strategic booklets FREE</span> when you enroll + daily live classes, performance tracking & mentorship. <br className="hidden md:block" />
             Or buy booklets separately for self-paced learning. Choose your path now.
@@ -73,7 +73,7 @@ const Hero = () => {
           >
             <a
               href="#online"
-              className="btn-primary w-full sm:w-auto inline-flex items-center justify-center gap-2 text-lg px-8 py-4"
+              className="btn-primary w-full sm:w-auto inline-flex items-center justify-center gap-2 text-base px-8 py-4"
             >
               <FaGraduationCap />
               Get FREE Booklets + Online Class
@@ -81,7 +81,7 @@ const Hero = () => {
             </a>
             <a
               href="#offline"
-              className="btn-secondary w-full sm:w-auto inline-flex items-center justify-center gap-2 text-lg px-8 py-4"
+              className="btn-secondary w-full sm:w-auto inline-flex items-center justify-center gap-2 text-base px-8 py-4"
             >
               <FaBook />
               Join Offline Program
@@ -100,9 +100,9 @@ const Hero = () => {
               <span className="w-2 h-2 bg-ark-yellow rounded-full"></span>
               <span className="text-sm"><strong className="text-ark-yellow">650+ Students</strong> <span className="text-ark-white/80">crossed 600+ marks</span></span>
             </div>
-            <div className="flex items-center gap-2 bg-ark-blue/20 border border-ark-blue/40 rounded-lg px-4 py-2">
-              <span className="w-2 h-2 bg-ark-blue rounded-full"></span>
-              <span className="text-sm"><strong className="text-ark-white">Expert Faculty</strong> <span className="text-ark-white/80">with 10+ years experience</span></span>
+            <div className="flex items-center gap-2 bg-ark-yellow/15 border border-ark-yellow/30 rounded-lg px-4 py-2">
+              <span className="w-2 h-2 bg-ark-yellow rounded-full"></span>
+              <span className="text-sm"><strong className="text-ark-yellow">Expert Faculty</strong> <span className="text-ark-white/80">with 10+ years experience</span></span>
             </div>
             <div className="flex items-center gap-2 bg-ark-yellow/10 border border-ark-yellow/20 rounded-lg px-4 py-2">
               <span className="w-2 h-2 bg-ark-yellow/80 rounded-full"></span>

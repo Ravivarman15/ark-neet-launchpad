@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { FaWhatsapp, FaClock, FaArrowRight } from 'react-icons/fa';
+import { FaWhatsapp, FaClock, FaArrowRight, FaCheckCircle } from 'react-icons/fa';
 import { HiSparkles } from 'react-icons/hi2';
 
 const phoneNumber = "917639399217";
@@ -68,8 +68,9 @@ const FinalCTA = () => {
               </button>
             </div>
 
-            <p className="text-ark-white/60 text-sm">
-              ✅ Free consultation • No commitment needed • Chat with our NEET experts
+            <p className="text-ark-white/60 text-sm flex items-center justify-center gap-1">
+              <FaCheckCircle className="text-ark-yellow text-sm" />
+              <span>Free consultation • No commitment needed • Chat with our NEET experts</span>
             </p>
           </motion.div>
         </div>

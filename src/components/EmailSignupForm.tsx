@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { FaArrowRight, FaCheckCircle, FaBook } from 'react-icons/fa';
+import { FaArrowRight, FaCheckCircle, FaBook, FaStar } from 'react-icons/fa';
 import { FormEvent, useState } from 'react';
 
 interface EmailSignupFormProps {
@@ -48,7 +48,10 @@ const EmailSignupForm = ({
             <FaArrowRight className="text-xs" />
           </button>
         </form>
-        <p className="text-xs text-muted-foreground">✅ No spam ever</p>
+        <p className="text-xs text-muted-foreground flex items-center gap-1">
+          <FaCheckCircle className="text-ark-yellow text-sm" />
+          <span>No spam ever</span>
+        </p>
       </motion.div>
     );
   }
@@ -76,8 +79,9 @@ const EmailSignupForm = ({
           className="text-center py-8"
         >
           <FaCheckCircle className="text-ark-yellow text-5xl mx-auto mb-4" />
-          <h4 className="text-xl font-bold text-foreground mb-2">
-            Almost there! 🎉
+          <h4 className="text-xl font-bold text-foreground mb-2 flex items-center justify-center gap-2">
+            <span>Almost there!</span>
+            <FaStar className="text-ark-yellow text-lg" />
           </h4>
           <p className="text-muted-foreground">
             Check your email for the download link. It usually arrives in 2-5 minutes.
@@ -118,8 +122,9 @@ const EmailSignupForm = ({
             <FaArrowRight /> {buttonText}
           </button>
 
-          <p className="text-xs text-muted-foreground text-center">
-            ✅ No spam — just resources. Unsubscribe anytime.
+          <p className="text-xs text-muted-foreground text-center flex items-center justify-center gap-1">
+            <FaCheckCircle className="text-ark-yellow text-sm" />
+            <span>No spam — just resources. Unsubscribe anytime.</span>
           </p>
         </form>
       )}
