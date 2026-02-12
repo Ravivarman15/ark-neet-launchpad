@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import { FaArrowRight, FaGraduationCap, FaBook } from 'react-icons/fa';
 import { HiSparkles } from 'react-icons/hi2';
+import { FaChartLine } from 'react-icons/fa';
 
 const Hero = () => {
   return (
@@ -65,29 +66,49 @@ const Hero = () => {
           </motion.p>
 
           {/* CTA Buttons - Outcome Focused */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.3 }}
-            className="flex flex-col sm:flex-row gap-4 justify-center items-center mt-8"
-          >
-            <a
-              href="#online"
-              className="btn-primary w-full sm:w-auto inline-flex items-center justify-center gap-2 text-base px-8 py-4"
-            >
-              <FaGraduationCap />
-              Get FREE Booklets + Online Class
-              <FaArrowRight className="text-sm" />
-            </a>
-            <a
-              href="#offline"
-              className="btn-secondary w-full sm:w-auto inline-flex items-center justify-center gap-2 text-base px-8 py-4"
-            >
-              <FaBook />
-              Join Offline Program
-              <FaArrowRight className="text-sm" />
-            </a>
-          </motion.div>
+           <motion.div
+             initial={{ opacity: 0, y: 30 }}
+             animate={{ opacity: 1, y: 0 }}
+             transition={{ duration: 0.6, delay: 0.3 }}
+             className="flex flex-col sm:flex-row gap-4 justify-center items-center mt-8"
+           >
+             <a
+               href="#online"
+               className="btn-primary w-full sm:w-auto inline-flex items-center justify-center gap-2 text-base px-8 py-4"
+             >
+               <FaGraduationCap />
+               Get FREE Booklets + Online Class
+               <FaArrowRight className="text-sm" />
+             </a>
+             <a
+               href="#offline"
+               className="btn-secondary w-full sm:w-auto inline-flex items-center justify-center gap-2 text-base px-8 py-4"
+             >
+               <FaBook />
+               Join Offline Program
+               <FaArrowRight className="text-sm" />
+             </a>
+           </motion.div>
+
+           {/* NEET Rank Predictor CTA - Highlighted */}
+           <motion.div
+             initial={{ opacity: 0, y: 30 }}
+             animate={{ opacity: 1, y: 0 }}
+             transition={{ duration: 0.6, delay: 0.4 }}
+             className="mt-8 px-6 py-6 bg-gradient-to-r from-ark-yellow/20 to-ark-yellow/10 border-2 border-ark-yellow/50 rounded-lg backdrop-blur-sm"
+           >
+             <p className="text-sm md:text-base text-ark-white/90 mb-4 font-medium">
+               Want to know your expected NEET rank?
+             </p>
+             <a
+               href="/neet-predictor"
+               className="inline-flex items-center justify-center gap-2 bg-ark-yellow text-ark-blue font-bold text-base px-8 py-3 rounded-lg hover:bg-ark-yellow/90 transition-all duration-300 shadow-lg hover:shadow-xl"
+             >
+               <FaChartLine />
+               Get Your NEET Rank Prediction
+               <FaArrowRight className="text-sm" />
+             </a>
+           </motion.div>
 
           {/* Trust indicators - Social Proof */}
           <motion.div
