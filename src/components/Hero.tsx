@@ -102,7 +102,8 @@ const Hero = () => {
              </p>
              <a
                href="/neet-predictor"
-               className="inline-flex items-center justify-center gap-2 bg-ark-yellow text-ark-blue font-bold text-base px-8 py-3 rounded-lg hover:bg-ark-yellow/90 transition-all duration-300 shadow-lg hover:shadow-xl"
+               className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-ark-yellow text-ark-blue font-bold text-base px-8 py-3 rounded-lg hover:bg-ark-yellow/90 transition-all duration-300 shadow-lg hover:shadow-xl"
+               {/* className="inline-flex items-center justify-center gap-2 bg-ark-yellow text-ark-blue font-bold text-base px-8 py-3 rounded-lg hover:bg-ark-yellow/90 transition-all duration-300 shadow-lg hover:shadow-xl" */}
              >
                <FaChartLine />
                Get Your NEET Rank Prediction
