@@ -339,21 +339,19 @@ const NEETPredictor = () => {
                   </div>
 
                   {/* Risk Analysis */}
-                  <div className={`rounded-2xl p-6 ${
-                    displayResult.riskLevel === 'Low' ? 'bg-green-50 border border-green-200' :
-                    displayResult.riskLevel === 'Moderate' ? 'bg-amber-50 border border-amber-200' :
-                    'bg-red-50 border border-red-200'
-                  }`}>
+                  <div className={`rounded-2xl p-6 ${displayResult.riskLevel === 'Low' ? 'bg-green-50 border border-green-200' :
+                      displayResult.riskLevel === 'Moderate' ? 'bg-amber-50 border border-amber-200' :
+                        'bg-red-50 border border-red-200'
+                    }`}>
                     <div className="flex items-center gap-3 mb-3">
-                      <FaShieldAlt className={`text-xl ${
-                        displayResult.riskLevel === 'Low' ? 'text-green-600' :
-                        displayResult.riskLevel === 'Moderate' ? 'text-amber-600' :
-                        'text-red-600'
-                      }`} />
+                      <FaShieldAlt className={`text-xl ${displayResult.riskLevel === 'Low' ? 'text-green-600' :
+                          displayResult.riskLevel === 'Moderate' ? 'text-amber-600' :
+                            'text-red-600'
+                        }`} />
                       <h3 className="font-bold text-foreground">Risk Analysis: <span className={
                         displayResult.riskLevel === 'Low' ? 'text-green-600' :
-                        displayResult.riskLevel === 'Moderate' ? 'text-amber-600' :
-                        'text-red-600'
+                          displayResult.riskLevel === 'Moderate' ? 'text-amber-600' :
+                            'text-red-600'
                       }>{displayResult.riskLevel} Risk</span></h3>
                     </div>
                     <p className="text-foreground/80 mb-2">{displayResult.riskMessage}</p>
@@ -462,9 +460,8 @@ const ProbabilityBar = ({ label, value }: { label: string; value: number }) => (
         initial={{ width: 0 }}
         animate={{ width: `${value}%` }}
         transition={{ duration: 1, ease: 'easeOut' }}
-        className={`h-full rounded-full ${
-          value >= 70 ? 'bg-green-500' : value >= 40 ? 'bg-ark-yellow' : 'bg-red-400'
-        }`}
+        className={`h-full rounded-full ${value >= 70 ? 'bg-green-500' : value >= 40 ? 'bg-ark-yellow' : 'bg-red-400'
+          }`}
       />
     </div>
   </div>
