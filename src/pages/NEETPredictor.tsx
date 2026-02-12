@@ -125,7 +125,8 @@ const NEETPredictor = () => {
                   </p>
                   <button
                     onClick={() => setStep('academic')}
-                    className="btn-primary text-lg px-10 py-4 inline-flex items-center gap-3"
+                    className="btn-primary w-full sm:w-auto text-lg px-10 py-4 inline-flex items-center justify-center gap-3"
+                    {/* className="btn-primary text-lg px-10 py-4 inline-flex items-center gap-3" */}
                   >
                     🎯 Start My Prediction
                     <FaArrowRight />
