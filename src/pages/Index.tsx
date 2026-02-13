@@ -16,8 +16,12 @@ import WhyARK from '@/components/WhyARK';
 import Testimonials from '@/components/Testimonials';
 import FinalCTA from '@/components/FinalCTA';
 import Footer from '@/components/Footer';
+import CheckoutModal from '@/components/CheckoutModal';
+import { useCheckout } from '@/hooks/useCheckout';
 
 const Index = () => {
+  const { isOpen, selectedProduct, openCheckout, closeCheckout } = useCheckout();
+
   return (
     <main className="overflow-hidden">
       <Navbar />
@@ -32,12 +36,13 @@ const Index = () => {
       <OnlineProgramme />
       <ProgrammeOptions />
       <BookletInformation />
-      <Booklets />
+      <Booklets onBuyClick={openCheckout} />
       <StudentOutcomes />
       <WhyARK />
       <Testimonials />
       <FinalCTA />
       <Footer />
+      <CheckoutModal product={selectedProduct} isOpen={isOpen} onClose={closeCheckout} />
     </main>
   );
 };

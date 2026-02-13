@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { FaBook, FaWhatsapp, FaArrowRight, FaCheckCircle, FaClock, FaBullseye, FaTrophy } from 'react-icons/fa';
+import { FaBook, FaWhatsapp, FaArrowRight, FaCheckCircle, FaClock, FaBullseye, FaTrophy, FaShoppingCart } from 'react-icons/fa';
 import { GiDna1 } from 'react-icons/gi';
 import { HiCheckCircle } from 'react-icons/hi2';
 
@@ -98,7 +98,11 @@ const bundles = [
   },
 ];
 
-const Booklets = () => {
+interface BookletsProps {
+  onBuyClick?: (productId: string) => void;
+}
+
+const Booklets = ({ onBuyClick }: BookletsProps) => {
   return (
     <section id="booklets" className="py-20 bg-secondary relative overflow-hidden">
       <div className="absolute top-0 left-0 w-64 h-64 bg-ark-yellow/5 rounded-full blur-3xl -translate-x-1/3 -translate-y-1/2" />
@@ -286,14 +290,12 @@ const Booklets = () => {
 
                 {/* CTA Button */}
                 <button
-                  onClick={() =>
-                    window.open(`https://wa.me/${phoneNumber}?text=${encodeURIComponent(booklet.whatsappMessage)}`, '_blank', 'noopener,noreferrer')
-                  }
+                  onClick={() => onBuyClick ? onBuyClick(booklet.id) : window.open(`https://wa.me/${phoneNumber}?text=${encodeURIComponent(booklet.whatsappMessage)}`, '_blank', 'noopener,noreferrer')}
                   className="btn-primary w-full inline-flex items-center justify-center gap-2 relative overflow-hidden group/btn"
                 >
                   <span className="absolute inset-0 bg-gradient-to-r from-ark-yellow/0 via-ark-white/20 to-ark-yellow/0 opacity-0 group-hover/btn:opacity-100 transition-opacity duration-300" />
-                  <FaWhatsapp />
-                  Get This Booklet
+                  <FaShoppingCart />
+                  Buy Now — ₹{booklet.price}
                   <FaArrowRight className="text-xs" />
                 </button>
               </div>
@@ -462,11 +464,11 @@ const Booklets = () => {
               </div>
 
               <button
-                onClick={() => window.open(`https://wa.me/${phoneNumber}?text=${encodeURIComponent('Hi ARK Team, I want to buy the booklet bundle. Please share details.')}`, '_blank', 'noopener,noreferrer')}
+                onClick={() => onBuyClick ? onBuyClick('bundle-full-rank-booster') : window.open(`https://wa.me/${phoneNumber}?text=${encodeURIComponent('Hi ARK Team, I want to buy the booklet bundle. Please share details.')}`, '_blank', 'noopener,noreferrer')}
                 className="w-full bg-ark-blue text-ark-white font-bold py-3 px-6 rounded-lg hover:bg-ark-blue/90 transition-colors flex items-center justify-center gap-2 text-lg"
               >
-                <FaWhatsapp />
-                Buy Now
+                <FaShoppingCart />
+                Buy Now — ₹4,999
               </button>
 
               <p className="text-xs text-muted-foreground text-center mt-4">
@@ -541,10 +543,10 @@ const Booklets = () => {
               <FaCheckCircle /> Get FREE With Program
             </a>
             <button
-              onClick={() => window.open(`https://wa.me/${phoneNumber}?text=${encodeURIComponent('Hi ARK Team, I want to buy the booklets. Please share details.')}`, '_blank', 'noopener,noreferrer')}
+              onClick={() => onBuyClick ? onBuyClick('bundle-full-rank-booster') : window.open(`https://wa.me/${phoneNumber}?text=${encodeURIComponent('Hi ARK Team, I want to buy the booklets. Please share details.')}`, '_blank', 'noopener,noreferrer')}
               className="btn-secondary inline-flex items-center gap-2 text-lg px-8 py-4"
             >
-              <FaWhatsapp /> Buy Booklets Only
+              <FaShoppingCart /> Buy Booklets — ₹4,999
             </button>
           </div>
         </motion.div>
